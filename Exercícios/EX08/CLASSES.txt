@@ -1,0 +1,301 @@
+public class HollowKnight {
+
+    public static void main(String[] args) {
+        // Exemplos de criação de objetos
+        Knight knight = new Knight("Armadura escura", 10, "Ferrão antigo");
+        Comerciante comerciante = new Comerciante(100, "Hollownest", "Olá, viajante!");
+        Hornet hornet = new Hornet("Vermelho", 80, "Agressiva");
+
+        knight.vagar();
+        comerciante.vender();
+        hornet.atacar();
+    }
+}
+
+class Knight {
+    String aparencia;
+    int tamanho;
+    String arma;
+
+    public Knight(String aparencia, int tamanho, String arma) {
+        this.aparencia = aparencia;
+        this.tamanho = tamanho;
+        this.arma = arma;
+    }
+
+    public void vagar() {
+        System.out.println("O cavaleiro está vagando.");
+    }
+
+    public void interagirObjeto() {
+        System.out.println("O cavaleiro interagiu com um objeto.");
+    }
+
+    public void usarFerrao() {
+        System.out.println("O cavaleiro usou o ferrão.");
+    }
+}
+
+class Comerciante {
+    int precoProduto;
+    String localizacao;
+    String dialogo;
+
+    public Comerciante(int precoProduto, String localizacao, String dialogo) {
+        this.precoProduto = precoProduto;
+        this.localizacao = localizacao;
+        this.dialogo = dialogo;
+    }
+
+    public void vender() {
+        System.out.println("O comerciante está vendendo um item.");
+    }
+
+    public void conversar() {
+        System.out.println("O comerciante está conversando.");
+    }
+
+    public void cantarolar() {
+        System.out.println("O comerciante está cantarolando.");
+    }
+}
+
+class Hornet {
+    String capaCor;
+    int velocidade;
+    String hostilidade;
+
+    public Hornet(String capaCor, int velocidade, String hostilidade) {
+        this.capaCor = capaCor;
+        this.velocidade = velocidade;
+        this.hostilidade = hostilidade;
+    }
+
+    public void esquivar() {
+        System.out.println("Hornet está se esquivando.");
+    }
+
+    public void atacar() {
+        System.out.println("Hornet está atacando.");
+    }
+
+    public void provocar() {
+        System.out.println("Hornet está provocando.");
+    }
+}
+
+class TorreEiffel {
+    int altura;
+    private String localizacao;
+    private String material;
+
+    public TorreEiffel(int altura, String localizacao, String material) {
+        this.altura = altura;
+        this.localizacao = localizacao;
+        this.material = material;
+    }
+
+    public void dominarPaisagem() {
+        System.out.println("A Torre Eiffel domina a paisagem.");
+    }
+}
+
+class Colagem {
+    private String materialPrincipal;
+    String tema;
+    String paleta;
+
+    public Colagem(String materialPrincipal, String tema, String paleta) {
+        this.materialPrincipal = materialPrincipal;
+        this.tema = tema;
+        this.paleta = paleta;
+    }
+
+    public void formarImagem() {
+        System.out.println("A colagem está formando uma imagem.");
+    }
+}
+
+class CartaoPostal {
+    String conteudo;
+    String selo;
+    String origem;
+
+    public CartaoPostal(String conteudo, String selo, String origem) {
+        this.conteudo = conteudo;
+        this.selo = selo;
+        this.origem = origem;
+    }
+
+    public void contarHistoria() {
+        System.out.println("O cartão postal está contando uma história.");
+    }
+}
+
+class Mulher {
+    private String expressaoFacial;
+    String vestimenta;
+    String forca;
+
+    public Mulher(String expressaoFacial, String vestimenta, String forca) {
+        this.expressaoFacial = expressaoFacial;
+        this.vestimenta = vestimenta;
+        this.forca = forca;
+    }
+
+    public void sustentarCarga() {
+        System.out.println("A mulher está sustentando uma carga.");
+    }
+}
+
+class CargaReciclavel {
+    private String tipoDeMaterial;
+    String cor;
+    int peso;
+
+    public CargaReciclavel(String tipoDeMaterial, String cor, int peso) {
+        this.tipoDeMaterial = tipoDeMaterial;
+        this.cor = cor;
+        this.peso = peso;
+    }
+
+    public void representarImpactoAmb() {
+        System.out.println("A carga reciclável representa um impacto ambiental.");
+    }
+}
+
+class Arte {
+    String tecnica;
+    String localizacao;
+    String mensagem;
+
+    public Arte(String tecnica, String localizacao, String mensagem) {
+        this.tecnica = tecnica;
+        this.localizacao = localizacao;
+        this.mensagem = mensagem;
+    }
+
+    public void provocarReflexao() {
+        System.out.println("A arte está provocando reflexão.");
+    }
+}
+
+class Trabalhador {
+    String passo;
+    String olhos;
+    String estadoEmocional;
+
+    public Trabalhador(String passo, String olhos, String estadoEmocional) {
+        this.passo = passo;
+        this.olhos = olhos;
+        this.estadoEmocional = estadoEmocional;
+    }
+
+    public void acaoFinal() {
+        System.out.println("O trabalhador realiza sua ação final.");
+    }
+}
+
+class Construcao {
+    private int numeroDeParedes;
+    String desenho;
+    String material;
+
+    public Construcao(int numeroDeParedes, String desenho, String material) {
+        this.numeroDeParedes = numeroDeParedes;
+        this.desenho = desenho;
+        this.material = material;
+    }
+
+    public void serErguida() {
+        System.out.println("A construção está sendo erguida.");
+    }
+}
+
+class Refeicao {
+    String pratoPrincipal;
+    String bebidaAcompanhante;
+    String percepcaoValor;
+
+    public Refeicao(String pratoPrincipal, String bebidaAcompanhante, String percepcaoValor) {
+        this.pratoPrincipal = pratoPrincipal;
+        this.bebidaAcompanhante = bebidaAcompanhante;
+        this.percepcaoValor = percepcaoValor;
+    }
+
+    public void sustentar() {
+        System.out.println("A refeição está sustentando.");
+    }
+}
+
+class Criatura {
+    String aparencia;
+    String meioLocomocao;
+    String comportamento;
+
+    public Criatura(String aparencia, String meioLocomocao, String comportamento) {
+        this.aparencia = aparencia;
+        this.meioLocomocao = meioLocomocao;
+        this.comportamento = comportamento;
+    }
+
+    public void vagar() {
+        System.out.println("A criatura está vagando.");
+    }
+
+    public void interagirObjeto() {
+        System.out.println("A criatura interagiu com um objeto.");
+    }
+
+    public void emitirSom() {
+        System.out.println("A criatura emitiu um som.");
+    }
+}
+
+class NaveEspacial {
+    String formato;
+    String sistemaPropulsao;
+    int capacidadeCarga;
+
+    public NaveEspacial(String formato, String sistemaPropulsao, int capacidadeCarga) {
+        this.formato = formato;
+        this.sistemaPropulsao = sistemaPropulsao;
+        this.capacidadeCarga = capacidadeCarga;
+    }
+
+    public void decolar() {
+        System.out.println("A nave espacial está decolando.");
+    }
+
+    public void navegar() {
+        System.out.println("A nave espacial está navegando.");
+    }
+
+    public void pousar() {
+        System.out.println("A nave espacial está pousando.");
+    }
+}
+
+class EstruturasCidade {
+    String estiloArquitetonico;
+    int numeroDeAndares;
+    String funcaoPrincipal;
+
+    public EstruturasCidade(String estiloArquitetonico, int numeroDeAndares, String funcaoPrincipal) {
+        this.estiloArquitetonico = estiloArquitetonico;
+        this.numeroDeAndares = numeroDeAndares;
+        this.funcaoPrincipal = funcaoPrincipal;
+    }
+
+    public void abrigarHabitantes() {
+        System.out.println("A estrutura da cidade está abrigando habitantes.");
+    }
+
+    public void fornecerProtecao() {
+        System.out.println("A estrutura da cidade está fornecendo proteção.");
+    }
+
+    public void alterarIluminacao() {
+        System.out.println("A estrutura da cidade está alterando a iluminação.");
+    }
+}

@@ -1,0 +1,60 @@
+import java.util.InputMismatchException;
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class CalculadoraMedia {
+
+    public static void main(String[] args) {
+
+        Locale.setDefault(Locale.US);
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.println("--- CALCULADORA DE MÉDIA ---");
+
+
+            double p1 = lerNota(scanner, "Digite a nota da Prova 1 (P1): ");
+            double e1 = lerNota(scanner, "Digite a nota da Entrega 1 (E1): ");
+            double e2 = lerNota(scanner, "Digite a nota da Entrega 2 (E2): ");
+            double x = lerNota(scanner, "Digite a nota das Atividades Extras (X): ");
+            double sub = lerNota(scanner, "Digite a nota da Prova Substitutiva (SUB): ");
+            double api = lerNota(scanner, "Digite a nota da API: ");
+
+
+            double notaBase = (p1 * 0.5) + (e1 * 0.2) + (e2 * 0.3) + x + (sub * 0.15);
+
+
+            double fatorCondicional = (notaBase > 5.9) ? 1.0 : 0.0;
+
+
+            double mediaFinal = (notaBase * 0.5) + (fatorCondicional * api * 0.5);
+
+
+            System.out.println("\n------------------------------------");
+            System.out.printf("A média final calculada é: %.2f%n", mediaFinal);
+            System.out.println("------------------------------------");
+
+        } catch (InputMismatchException e) {
+            System.err.println("Erro: Por favor, insira um número válido (use ponto como separador decimal).");
+        } finally {
+            // Fecha o scanner para liberar os recursos
+            scanner.close();
+        }
+    }
+
+    /**
+     * Método auxiliar para ler uma nota do teclado, garantindo que seja um valor numérico.
+     * @param scanner O objeto Scanner para leitura.
+     * @param mensagem A mensagem a ser exibida ao usuário.
+     * @return O valor double lido.
+     */
+    private static double lerNota(Scanner scanner, String mensagem) {
+        System.out.print(mensagem);
+        while (!scanner.hasNextDouble()) {
+            System.out.print("Entrada inválida. Por favor, digite um número: ");
+            scanner.next(); // Descarta a entrada inválida
+        }
+        return scanner.nextDouble();
+    }
+}
